@@ -2,7 +2,27 @@
  *
  * Created by: Angelo Yalung
  * Created on: Oct 2023
- * This program ...
+ * This program turns the microbit into a traffic light
 */
 
+// so i don't see a massive amount of errors
+let neopixelStrip: neopixel.Strip = null
+let myStrip: neopixel.Strip = null
 
+input.onButtonPressed(Button.A, function () {
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.show()
+    basic.pause(5000)
+    myStrip.clear()
+
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.show()
+    basic.pause(5000)
+    myStrip.clear()
+
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.show()
+    basic.pause(5000)
+    myStrip.clear()
+})
