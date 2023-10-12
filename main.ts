@@ -2,5 +2,5 @@
  *
  * Created by: Angelo Yalung
  * Created on: Oct 2023
- * This program ...
+ * This program turns the microbit into a traffic light
 */
