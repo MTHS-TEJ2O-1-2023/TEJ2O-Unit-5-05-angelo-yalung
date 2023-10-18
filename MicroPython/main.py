@@ -5,22 +5,21 @@ This module is a Micro:bit MicroPython program
 """
 
 from microbit import *
-import neopixel
+from neopixel import NeoPixel
 
+num_pixels = 4
+np = neopixel.NeoPixel(pin16, 4)
 
 while True:
     if button_a.is_pressed():
-        np[0] = (0, 255, 0)
+        np[1] = (0, 255, 0)
         np.show()
         sleep(5000)
-        clear()
 
-        np[1] = (255, 255, 0)
+        np[2] = (255, 255, 0)
         np.show()
         sleep(5000)
-        clear()
 
-        np[2] = (255, 0, 0)
+        np[3] = (255, 0, 0)
         np.show()
-        sleep(5000)
-        clear()
+        sleep(500)
